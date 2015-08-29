@@ -1,0 +1,19 @@
+
+<img src="s.jpg"/>
+
+
+
+
+<audio preload="preload" id="car_audio" src="s.mp3" loop></audio>
+<script>
+ setTimeout(function(){
+ $(window).scrollTop(1);
+ },0);
+  document.getElementById('car_audio').play();
+ document.addEventListener("WeixinJSBridgeReady", function () {
+        WeixinJSBridge.invoke('getNetworkType', {}, function (e) {
+  document.getElementById('car_audio').play();
+        });
+    }, false);
+</script>
+
